@@ -63,7 +63,7 @@ allprojects {
 dependencies {
   ...
   //androidx项目
-  implementation 'com.github.xuexiangjys:XUI:1.1.1'
+  implementation 'com.github.xuexiangjys:XUI:1.1.2'
 
   implementation 'androidx.appcompat:appcompat:1.1.0'
   implementation 'androidx.recyclerview:recyclerview:1.1.0'
@@ -169,6 +169,8 @@ protected void attachBaseContext(Context newBase) {
 
 #### 蒲公英下载
 
+> 蒲公英下载的密码: xuexiangjys
+
 [![蒲公英](https://img.shields.io/badge/downloads-蒲公英-blue.svg)](https://www.pgyer.com/XUIDemo)
 
 ![](./art/download_pugongying.png)
@@ -217,6 +219,11 @@ C*y | 1￥ | 微信
 *钰晗 | 6￥ | 支付宝
 *娜 | 3￥ | 微信
 *米 | 20￥ | 微信
+*忘 | 10￥ | 微信
+*清红 | 1￥ | 支付宝
+*口 | 5￥ | 微信
+\* | 10.24￥ | 微信
+
 
 ## 联系方式
 
