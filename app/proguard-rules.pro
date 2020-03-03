@@ -180,6 +180,14 @@
 -keep class com.google.gson.stream.** { *; }
 -keep class com.google.gson.examples.android.model.** { *; }
 
+# Glide
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.module.AppGlideModule
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
+}
+
 # Retrofit
 -dontwarn retrofit2.**
 -keep class retrofit2.** { *; }
@@ -300,3 +308,18 @@
 
 # 数据库
 -keep class com.xuexiang.xuidemo.base.db.entity.** { *; }
+
+# PictureSelector
+-keep class com.luck.picture.lib.** { *; }
+-dontwarn com.yalantis.ucrop**
+-keep class com.yalantis.ucrop** { *; }
+-keep interface com.yalantis.ucrop** { *; }
+
+# camerakit
+-dontwarn com.google.android.gms.**
+-keepclasseswithmembers class com.camerakit.preview.CameraSurfaceView {
+    native <methods>;
+}
+
+
+-keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }

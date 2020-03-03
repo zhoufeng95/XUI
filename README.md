@@ -26,7 +26,9 @@
 
 ## X系列库快速集成
 
-为了方便大家快速集成X系列框架库，我提供了一个空壳模版供大家参考使用: https://github.com/xuexiangjys/TemplateAppProject
+为了方便大家快速集成X系列框架库，我提供了一个空壳模版供大家参考使用: [https://github.com/xuexiangjys/TemplateAppProject](https://github.com/xuexiangjys/TemplateAppProject)
+
+除此之外，我还特别制作了几期[视频教程](https://space.bilibili.com/483850585/channel/detail?cid=104998)供大家学习参考.
 
 ----
 
@@ -63,12 +65,12 @@ allprojects {
 dependencies {
   ...
   //androidx项目
-  implementation 'com.github.xuexiangjys:XUI:1.1.2'
+  implementation 'com.github.xuexiangjys:XUI:1.1.3'
 
   implementation 'androidx.appcompat:appcompat:1.1.0'
   implementation 'androidx.recyclerview:recyclerview:1.1.0'
   implementation 'com.google.android.material:material:1.1.0-beta01'
-  implementation 'com.github.bumptech.glide:glide:4.8.0'
+  implementation 'com.github.bumptech.glide:glide:4.11.0'
 }
 ```
 
@@ -147,6 +149,13 @@ protected void attachBaseContext(Context newBase) {
 }
 ```
 
+## 混淆配置
+
+```
+-keep class com.xuexiang.xui.widget.edittext.materialedittext.** { *; }
+
+```
+
 ----
 
 ## 演示（请star支持）
@@ -223,10 +232,16 @@ C*y | 1￥ | 微信
 *清红 | 1￥ | 支付宝
 *口 | 5￥ | 微信
 \* | 10.24￥ | 微信
+*俊耀 | 100￥ | 支付宝
+*俊杰 | 1￥ | 支付宝
+*鸥 | 10.24￥ | 微信
+*云 | 20.21￥ | 支付宝
+*钰晗 | 66￥ | 支付宝
 
 
 ## 联系方式
 
-[![](https://img.shields.io/badge/点击一键加入QQ交流群-695048677-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=a2ab505862c81f1528416b585832022e835ce0abe28eefa4b0d53f8094a5691d)
+[![](https://img.shields.io/badge/XUI开源交流群-695048677-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=a2ab505862c81f1528416b585832022e835ce0abe28eefa4b0d53f8094a5691d)
+[![](https://img.shields.io/badge/XUI开源交流2群-700246750-blue.svg)](http://shang.qq.com/wpa/qunwpa?idkey=39497f13d5e456d219be785361a282d2d9c8cd9ba7745f6170def9d90643e164)
 
 ![](./art/xui_qq.jpg)
