@@ -27,6 +27,7 @@ import com.luck.picture.lib.PictureSelector;
 import com.luck.picture.lib.config.PictureConfig;
 import com.luck.picture.lib.entity.LocalMedia;
 import com.xuexiang.xpage.annotation.Page;
+import com.xuexiang.xui.widget.actionbar.TitleBar;
 import com.xuexiang.xuidemo.R;
 import com.xuexiang.xuidemo.base.BaseFragment;
 import com.xuexiang.xuidemo.utils.Utils;
@@ -51,6 +52,18 @@ public class PictureSelectorFragment extends BaseFragment implements ImageSelect
 
     private List<LocalMedia> mSelectList = new ArrayList<>();
 
+    @Override
+    protected TitleBar initTitle() {
+        TitleBar titleBar = super.initTitle();
+        titleBar.addAction(new TitleBar.TextAction("Github") {
+            @Override
+            public void performAction(View view) {
+                Utils.goWeb(getContext(), "https://github.com/LuckSiege/PictureSelector");
+            }
+        });
+        return titleBar;
+    }
+
     /**
      * 布局的资源id
      *
@@ -71,12 +84,7 @@ public class PictureSelectorFragment extends BaseFragment implements ImageSelect
         recyclerView.setAdapter(mAdapter = new ImageSelectGridAdapter(getActivity(), this));
         mAdapter.setSelectList(mSelectList);
         mAdapter.setSelectMax(8);
-        mAdapter.setOnItemClickListener(new ImageSelectGridAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(int position, View v) {
-                PictureSelector.create(PictureSelectorFragment.this).themeStyle(R.style.XUIPictureStyle).openExternalPreview(position, mSelectList);
-            }
-        });
+        mAdapter.setOnItemClickListener((position, v) -> PictureSelector.create(PictureSelectorFragment.this).themeStyle(R.style.XUIPictureStyle).openExternalPreview(position, mSelectList));
     }
 
     @OnClick({R.id.button, R.id.button_no_camera, R.id.button_one_photo, R.id.button_photo_gif})
